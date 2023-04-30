@@ -23,13 +23,53 @@ if (isset($_SESSION['login_status']) && $_SESSION['login_status'] == true) {
 </head>
 <body>
 
-    <a href="./home.php">Home</a> <br>
-    <form action="" method="post">
-    <label for="todo">Insert item:</label>
-    <input type="text" id="todo" name="todo" placeholder="Item"><br>
-    <input type="submit" value="Insert">
-    </form>
+<section class="main">
+        <div class="top_triangle"></div>
+        <div class="trapezoid top_trapezoid"></div>
+        <section class="main_frame">
+            <section class="main_section">
+            <section class="insert_form_section">
+                <form action="" method="post" class="insert_form">
+                    <div class="insert_item">
+                    <div>
+                    <p>Insert item:</p>
+                    </div>
+                    <div>
+                    <input type="text" id="todo" name="todo" placeholder="Item" maxlength="50"><br>
+                    </div>
+                    </div>
+                    <div class="insert_item_button">
+                    <input type="submit" value="   Insert   ">
+                    </div>
+                </form>
+            </section>
+            <section class="items_section">
+                <div class="action_item_head">Action</div>
+                <div class="to_do_item_head">To do</div>
+                <div class="status_item_head">Status</div>
+            </section>
+            <hr>
+            <?php
+            $read_db = $conn->query("SELECT * FROM to_do_list ORDER BY id DESC");
 
+            while($row = $read_db->fetch_array()) {
+            echo '<form action="test.php" method="get">';
+                echo '<section class="item">';
+                // echo '<div class="action_item">'."<a href='update.php?id=".$row['id']."'>Complete</a>".'</div>';
+                echo "<a href='update.php?id=".$row['id']."'>C/U</a>";
+                echo "<a href='todolist.php?id=".$row['id']."'>Del</a> <br>";
+                echo '<div class="to_do_item">'. $row['item'] .'</div>';
+                echo '<div class="status_item">'. ($row['status'] == 1 ? 'Pending' : 'Complete').'</div>';          
+                echo '</section>';
+            echo '</form>';
+            echo '<hr class="hr_dashed">';
+            }
+            ?>
+            </section>
+            </section>
+        </section>
+        
+    </section>
 <?php
 
 //check if POST['todo'] is not set to avoid display an error on the page
@@ -52,18 +92,18 @@ echo '<br>';
 
 //read the db
 
-$read_db = $conn->query("SELECT * FROM to_do_list ORDER BY id DESC");
+
 
 //display the db items
-while($row = $read_db->fetch_array()){
-    echo "<form action='test.php' method='get'>";
-    echo '<h4> ID: '  . $row['id'].'</h4>';
-    echo '<p> To do item: ' . $row['item'].' </p>';
-    echo '<p> Status: '. ($row['status'] == 1 ? 'Pending' : 'Complete').'</p>';
-    echo "<a href='todolist.php?id=".$row['id']."'>Delete</a> <br>";
-    echo "<a href='update.php?id=".$row['id']."'>Complete</a>";
-    echo '</form>';
-}
+// while($row = $read_db->fetch_array()){
+//     echo "<form action='test.php' method='get'>";
+//     echo '<h4> ID: '  . $row['id'].'</h4>';
+//     echo '<p> To do item: ' . $row['item'].' </p>';
+//     echo '<p> Status: '. ($row['status'] == 1 ? 'Pending' : 'Complete').'</p>';
+//     echo "<a href='todolist.php?id=".$row['id']."'>Delete</a> <br>";
+//     echo "<a href='update.php?id=".$row['id']."'>Complete</a>";
+//     echo '</form>';
+// }
 
 //delete
 if (isset($_GET['id'])) {
