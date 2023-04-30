@@ -9,23 +9,42 @@
 </head>
 <body>
     <section class="main">
-        <div class="top_triangle">
-        </div>
+        <div class="top_triangle"></div>
         <div class="trapezoid top_trapezoid"></div>
         <section class="main_frame">
+            <section class="main_section">
             <section class="insert_form_section">
                 <form action="" method="post" class="insert_form">
                     <div class="insert_item">
+                    <div>
                     <p>Insert item:</p>
-                    <input type="text" id="todo" name="todo" placeholder="Item"><br>
+                    </div>
+                    <div>
+                    <input type="text" id="todo" name="todo" placeholder="Item" maxlength="50"><br>
+                    </div>
                     </div>
                     <div class="insert_item_button">
-                    <input type="submit" value="Insert">
+                    <input type="submit" value="   Insert   ">
                     </div>
                 </form>
-
+            </section>
+            <section class="items_section">
+                <div class="action_item_head">Action</div>
+                <div class="to_do_item_head">To do</div>
+                <div class="status_item_head">Status</div>
+            </section>
+            <hr>
+            <section class="item">
+                <div class="action_item">php</div>
+                <div class="to_do_item">From php</div>
+                <div class="status_item">php</div>
+            </section>
+            <hr class="hr_dashed">
+            </section>
             </section>
         </section>
+        
     </section>
+    
 </body>
 </html>
