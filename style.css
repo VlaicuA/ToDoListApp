@@ -1,0 +1,75 @@
+:root {
+    --clip: #999999;
+    --main: #EFE4BB;
+}
+
+.main {
+    border: 1px solid black;
+    width: 1200px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top_triangle {
+    width: 0;
+	height: 0;
+	border-left: 55px solid transparent;
+	border-right: 55px solid transparent;
+    border-bottom: 60px solid var(--clip);
+    margin-bottom: -1px;
+}
+
+.trapezoid {
+    height: 0;
+    width: 150px;
+  }
+
+.top_trapezoid {
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 60px solid var(--clip);
+  z-index: 1;
+}
+
+.main_frame {
+    width: 1024px;
+    height: 500px; 
+    margin-top: -60px;
+    background-color: var(--main);
+    border-radius: 5px;
+    box-shadow: 5px 3px 5px rgb(207, 233, 250);
+    display: flex;
+    justify-content: center;
+}
+
+.insert_form_section {
+    padding-top: 80px ;
+    width: 900px;
+}
+
+.insert_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.insert_item input {
+    width: 600px;
+    height: auto;
+}
+
+.insert_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.insert_item_button {
+    margin-left: 50px;
+    width: 48px;
+    box-shadow: 3px 3px 3px rgb(134, 135, 136);
+}
