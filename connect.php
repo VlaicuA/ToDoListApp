@@ -1,7 +1,7 @@
 <?php
 session_start();
 //check if logged in
-echo 'connect <br>';
+echo 'connected to DB <br>';
 if (isset($_SESSION['login_status']) && $_SESSION['login_status'] == true) {
     echo '';
 } else {

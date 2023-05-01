@@ -1,11 +1,12 @@
 <?php
+//design done with figma
 include_once 'connect.php';
 //check if logged in
 echo 'To do list <br>';
 if (isset($_SESSION['login_status']) && $_SESSION['login_status'] == true) {
     echo 'Hello You are logged in';;
 } else {
-    header('Location: home.php');
+    header('Location: index.php');
     $_SESSION['login_mess'] = 'You are not logged in';
     exit;
 };

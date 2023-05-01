@@ -40,6 +40,7 @@ if (empty($username) || empty($password)) {
 } else if ($query['username'] == $username && $query['password'] == $password) {
     $_SESSION['login_status'] = true;
     $_SESSION['login_mess'] = 'Hello ' . $username . '. You are connected';
+    $_SESSION['username'] = $username;
 } else {
     $_SESSION['login_mess'] = 'Wrong username or password';
     $_SESSION['login_status'] = false;
@@ -50,7 +51,7 @@ if (isset($_SESSION['login_status']) &&  $_SESSION['login_status'] == true) {
     header('Location: todolist.php');
     exit;
 } else {
-    header('Location: home.php');
+    header('Location: index.php');
     $_SESSION['login_mess'] = 'You are not logged in';
     exit;
 };

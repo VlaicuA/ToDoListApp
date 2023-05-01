@@ -4,14 +4,17 @@
     --hr_line: #000000;
 }
 
+
 * {
     box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
 }
 
-body{
+/* body{
     display: flex;
-    justify-content: center;
-}
+    align-items: center;
+} */
 
 .main {
     width: 1200px;
@@ -81,7 +84,7 @@ body{
 
 .insert_item_button {
     margin-left: 80px;
-    width: 99px;
+    width: 87px;
     box-shadow: 1px 3px 10px rgb(134, 135, 136);
     font-size: 20px;
 }
@@ -116,6 +119,10 @@ body{
     display: flex;
     justify-content: center;
 }
+.to_do_item{
+    font-family: 'Schoolbell', arial, serif; 
+}
+
 
 .action_item_head, .action_item {
     width: 90px;
