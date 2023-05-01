@@ -56,8 +56,8 @@ if (isset($_SESSION['login_status']) && $_SESSION['login_status'] == true) {
             echo '<form action="test.php" method="get">';
                 echo '<section class="item">';
                 // echo '<div class="action_item">'."<a href='update.php?id=".$row['id']."'>Complete</a>".'</div>';
-                echo "<a href='update.php?id=".$row['id']."'>C/U</a>";
-                echo "<a href='todolist.php?id=".$row['id']."'>Del</a> <br>";
+                echo "<a class='update_button' href='update.php?id=".$row['id']." '>C/U</a>";
+                echo "<a class='delete_button' href='todolist.php?id=".$row['id']."'>Del</a> <br>";
                 echo '<div class="to_do_item">'. $row['item'] .'</div>';
                 echo '<div class="status_item">'. ($row['status'] == 1 ? 'Pending' : 'Complete').'</div>';          
                 echo '</section>';

@@ -156,6 +156,21 @@ hr{
     align-items: center;
 }
 
+.delete_button {
+    text-decoration: none;
+}
+
+.update_button {
+    text-decoration: none;
+}
+
+.delete_button:hover {
+    color: red;
+}
+
+.update_button {
+    color: green;
+}
 
 
 
