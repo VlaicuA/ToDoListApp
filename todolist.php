@@ -35,7 +35,7 @@ if (isset($_SESSION['login_status']) && $_SESSION['login_status'] == true) {
                     <p>Insert item:</p>
                     </div>
                     <div>
-                    <input type="text" id="todo" name="todo" placeholder="Item" maxlength="40"><br>
+                    <input type="text" id="todo" name="todo" placeholder="Item" maxlength="80" required><br>
                     </div>
                     </div>
                     <div class="insert_item_button">

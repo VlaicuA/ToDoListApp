@@ -158,19 +158,30 @@ hr{
 
 .delete_button {
     text-decoration: none;
+    color: black;
 }
 
 .update_button {
     text-decoration: none;
+    color: black;
+}
+
+.delete_button:visited {
+    color: black;
 }
 
 .delete_button:hover {
     color: red;
 }
 
-.update_button {
-    color: green;
+.update_button:visited {
+    color: black;
 }
+.update_button:hover {
+    color:darkcyan;
+}
+
+
 
 
 
